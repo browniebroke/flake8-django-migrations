@@ -25,7 +25,7 @@ This is the list of checks currently implemented by this plugin.
 
 ### DM001
 
-`RemoveField` operation should be wrapped in `SeparateDatabaseAndState`. 
+`RemoveField` operation should be wrapped in `SeparateDatabaseAndState`.
 
 Such an operation should be run in two separate steps, using `SeparateDatabaseAndState`, otherwise it is not backwards compatible.
 
@@ -59,4 +59,3 @@ class Migration(migrations.Migration):
         ),
     ]
 ```
-
