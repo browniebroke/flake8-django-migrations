@@ -43,10 +43,8 @@ DM = "flake8_django_migrations:Plugin"
 addopts = "-v -Wdefault --cov=flake8_django_migrations"
 
 [tool.semantic_release]
-version_variable = [
-    "flake8_django_migrations/__init__.py:__version__",
-    "pyproject.toml:version"
-]
+version_toml = "pyproject.toml:tool.poetry.version"
+version_variable = "flake8_django_migrations/__init__.py:__version__"
 branch = "main"
 build_command = "pip install poetry && poetry build"
 
