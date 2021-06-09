@@ -32,10 +32,6 @@ isort = "^5.6.4"
 pyupgrade = { version = "^2.7.3", python = "^3.6.1" }
 tox = "^3.20.1"
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
 [tool.poetry.plugins."flake8.extension"]
 DM = "flake8_django_migrations:Plugin"
 
@@ -58,3 +54,7 @@ source = ["flake8_django_migrations"]
 
 [tool.coverage.report]
 ignore_errors = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
