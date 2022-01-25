@@ -31,16 +31,18 @@ flake8 = "^4.0.0"
 isort = "^5.10"
 pyupgrade = "^2.29"
 tox = "^3.20.1"
+pytest-srcpaths = "^1.2.1"
 
 [tool.poetry.plugins."flake8.extension"]
 DM = "flake8_django_migrations:Plugin"
 
 [tool.pytest.ini_options]
 addopts = "-v -Wdefault --cov=flake8_django_migrations"
+pythonpath = ["src"]
 
 [tool.semantic_release]
 version_toml = "pyproject.toml:tool.poetry.version"
-version_variable = "flake8_django_migrations/__init__.py:__version__"
+version_variable = "src/flake8_django_migrations/__init__.py:__version__"
 branch = "main"
 build_command = "pip install poetry && poetry build"
 
