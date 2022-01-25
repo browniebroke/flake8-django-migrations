@@ -296,6 +296,20 @@ pytest = ">=4.6"
 testing = ["fields", "hunter", "process-tests", "six", "pytest-xdist", "virtualenv"]
 
 [[package]]
+name = "pytest-srcpaths"
+version = "1.2.1"
+description = "Add paths to sys.path"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+pytest = ">=6.2.0"
+
+[package.extras]
+test = ["tox"]
+
+[[package]]
 name = "pyupgrade"
 version = "2.31.0"
 description = "A tool to automatically upgrade syntax for newer versions."
@@ -411,7 +425,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "41a06580e8657f83a35059ab3f9f41f76e033a7dc8c0c2584822e99546b2f0d7"
+content-hash = "fe3e941828b6edede205bf75825c6732a37d78784e6567511673fe413879c73e"
 
 [metadata.files]
 astor = [
@@ -558,6 +572,10 @@ pytest = [
 pytest-cov = [
     {file = "pytest-cov-3.0.0.tar.gz", hash = "sha256:e7f0f5b1617d2210a2cabc266dfe2f4c75a8d32fb89eafb7ad9d06f6d076d470"},
     {file = "pytest_cov-3.0.0-py3-none-any.whl", hash = "sha256:578d5d15ac4a25e5f961c938b85a05b09fdaae9deef3bb6de9a6e766622ca7a6"},
+]
+pytest-srcpaths = [
+    {file = "pytest-srcpaths-1.2.1.tar.gz", hash = "sha256:78d71b9a2ece6839654421400c4ec78b6b1c1c101cdeda958acb08f1c6847216"},
+    {file = "pytest_srcpaths-1.2.1-py3-none-any.whl", hash = "sha256:222b68659e4bd401034b45b38b81f4103afb12807128460e19b6fb82b0e227e7"},
 ]
 pyupgrade = [
     {file = "pyupgrade-2.31.0-py2.py3-none-any.whl", hash = "sha256:0a62c5055f854d7f36e155b7ee8920561bf0399c53edd975cf02436eef8937fc"},
