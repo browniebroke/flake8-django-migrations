@@ -24,7 +24,7 @@ astor = ">=0.1"
 importlib-metadata = {version = ">=0.9", python = "<3.8"}
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.1.2"
+pytest = "^7.0.0"
 pytest-cov = "^3.0.0"
 black = "^21.11b1"
 flake8 = "^4.0.0"
