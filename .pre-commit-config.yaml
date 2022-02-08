@@ -42,3 +42,8 @@ repos:
     hooks:
       - id: commitizen
         stages: [commit-msg]
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.2
+    hooks:
+      - id: bandit
+        args: [-x, tests]
