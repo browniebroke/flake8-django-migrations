@@ -45,7 +45,6 @@ This plugin should be used automatically when running flake8:
 flake8
 ```
 
-
 ## Checks
 
 This is the list of checks currently implemented by this plugin.
@@ -56,8 +55,8 @@ This is the list of checks currently implemented by this plugin.
 
 Such an operation should be run in two separate steps, using `SeparateDatabaseAndState`, otherwise it is not backwards compatible.
 
-* Step 1: remove the field from the model and code. For foreign key fields, the foreign key constraint should also be dropped.
-* Step 2: remove the column from the database.
+- Step 1: remove the field from the model and code. For foreign key fields, the foreign key constraint should also be dropped.
+- Step 2: remove the column from the database.
 
 #### Bad
 
