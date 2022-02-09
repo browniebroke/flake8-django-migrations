@@ -47,39 +47,12 @@ jobs:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v4.1.9
 
-  lint:
-    strategy:
-      fail-fast: false
-      matrix:
-        linter:
-          - name: Flake8
-            run: flake8
-          - name: Black
-            run: black --check .
-          - name: PyUpgrade
-            run: pyupgrade --py36-plus `find . -name "*.py"`
-          - name: isort
-            run: isort -c -v .
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.8"
-      - uses: abatilo/actions-poetry@v2.1.4
-      - name: Install Dependencies
-        run: poetry install
-      - name: ${{ matrix.linter.name }}
-        run: poetry run ${{ matrix.linter.run }}
-
   release:
     runs-on: ubuntu-latest
     environment: release
     if: github.ref == 'refs/heads/main'
     needs:
       - test
-      - lint
       - commitlint
 
     steps:
