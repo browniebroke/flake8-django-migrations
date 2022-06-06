@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2022-06-06)
+### Fix
+* **deps:** Revert PSR upgrade ([`a7f4cf7`](https://github.com/browniebroke/flake8-django-migrations/commit/a7f4cf762a3c6ccb2283532f552520c9ae3c98ec))
+
 ## v0.2.0 (2022-01-24)
 ### Feature
 * Drop support for Python 3.6 ([`cda2daa`](https://github.com/browniebroke/flake8-django-migrations/commit/cda2daa7a31d956a87f46862a83253f7535a5c36))
