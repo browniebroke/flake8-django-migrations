@@ -25,7 +25,7 @@ importlib-metadata = {version = ">=0.9", python = "<3.8"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0"
-pytest-cov = "^3.0"
+pytest-cov = "^4.0"
 
 [tool.poetry.plugins."flake8.extension"]
 DM = "flake8_django_migrations:Plugin"
