@@ -1,8 +1,8 @@
 # flake8-django-migrations
 
 <p align="center">
-  <a href="https://github.com/browniebroke/flake8-django-migrations/actions?query=workflow%3ACI">
-    <img alt="CI Status" src="https://img.shields.io/github/actions/workflow/status/browniebroke/flake8-django-migrations/CI?label=CI&logo=github&style=flat-square">
+  <a href="https://github.com/browniebroke/flake8-django-migrations/actions/workflows/ci.yml?query=branch%3Amain">
+    <img alt="CI Status" src="https://img.shields.io/github/actions/workflow/status/browniebroke/flake8-django-migrations/ci.yml?branch=main&label=CI&logo=github&style=flat-square">
   </a>
   <a href="https://codecov.io/gh/browniebroke/flake8-django-migrations">
     <img src="https://img.shields.io/codecov/c/github/browniebroke/flake8-django-migrations.svg?logo=codecov&style=flat-square" alt="Test coverage percentage">
