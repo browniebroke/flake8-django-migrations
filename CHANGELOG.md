@@ -2,6 +2,20 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.0 (2023-06-27)
+
+### Feature
+
+* Drop support for Python 3.7 ([`d41a017`](https://github.com/browniebroke/flake8-django-migrations/commit/d41a017ef1a830c59d9b287694eddc1aad65bd64))
+
+### Breaking
+
+* Drop support for Python 3.7 as it reached EOL on June 27, 2023. More infos: https://devguide.python.org/versions/ ([`d41a017`](https://github.com/browniebroke/flake8-django-migrations/commit/d41a017ef1a830c59d9b287694eddc1aad65bd64))
+
+### Documentation
+
+* Update badge for CI workflow ([#333](https://github.com/browniebroke/flake8-django-migrations/issues/333)) ([`9072f9c`](https://github.com/browniebroke/flake8-django-migrations/commit/9072f9c56a8293f0bc578c8af0bf73efc23fa1ac))
+
 ## v0.3.0 (2022-11-20)
 ### Feature
 * Officially support Python 3.10 & 3.11 ([#301](https://github.com/browniebroke/flake8-django-migrations/issues/301)) ([`10a2572`](https://github.com/browniebroke/flake8-django-migrations/commit/10a25729ef8fb34f37b7b3490c858e076040d673))
