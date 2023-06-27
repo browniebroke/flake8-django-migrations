@@ -1,8 +1,6 @@
 import ast
 
-# Core Library
 import importlib.metadata as importlib_metadata
-import sys
 from typing import Any, Generator, List, Tuple, Type
 
 from .checkers.issue import Issue
