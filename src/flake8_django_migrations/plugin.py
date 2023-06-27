@@ -1,16 +1,12 @@
 import ast
+
+# Core Library
+import importlib.metadata as importlib_metadata
 import sys
 from typing import Any, Generator, List, Tuple, Type
 
 from .checkers.issue import Issue
 from .checkers.remove_field import RemoveFieldChecker
-
-if sys.version_info < (3, 8):  # pragma: no cover (<PY38)
-    # Third party
-    import importlib_metadata
-else:  # pragma: no cover (PY38+)
-    # Core Library
-    import importlib.metadata as importlib_metadata
 
 
 class Visitor(ast.NodeVisitor):
