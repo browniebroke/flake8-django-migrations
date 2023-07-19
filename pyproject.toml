@@ -40,6 +40,15 @@ version_variable = "src/flake8_django_migrations/__init__.py:__version__"
 branch = "main"
 build_command = "pip install poetry && poetry build"
 
+[tool.semantic_release.changelog]
+exclude_commit_patterns = [
+    "chore*",
+    "ci*",
+]
+
+[tool.semantic_release.changelog.environment]
+keep_trailing_newline = true
+
 [tool.isort]
 profile = "black"
 known_first_party = "flake8_django_migrations"
