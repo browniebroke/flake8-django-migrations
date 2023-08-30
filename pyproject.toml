@@ -83,7 +83,7 @@ select = [
 ]
 
 [tool.ruff.isort]
-known-first-party = "flake8_django_migrations"
+known-first-party = ["flake8_django_migrations"]
 
 [tool.coverage.run]
 branch = true
