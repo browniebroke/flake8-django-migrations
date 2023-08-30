@@ -6,6 +6,8 @@ from .issue import Issue
 
 
 class DM001(Issue):
+    """Dangerous RemoveField operation."""
+
     code: str = "DM001"
     message: str = (
         f"{code} RemoveField operation should be wrapped in SeparateDatabaseAndState"
@@ -17,7 +19,10 @@ class DM001(Issue):
 
 
 class RemoveFieldChecker(Checker):
+    """Checker that detects dangerous RemoveField operation."""
+
     def run(self, node: ast.Call) -> Any:
+        """Check whether the operation is safe."""
         issues = []
         call_name = self.get_call_name(node)
         if call_name == "SeparateDatabaseAndState":
