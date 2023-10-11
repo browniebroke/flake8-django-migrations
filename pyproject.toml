@@ -37,7 +37,9 @@ pythonpath = ["src"]
 [tool.semantic_release]
 branch = "main"
 version_toml = ["pyproject.toml:tool.poetry.version"]
-version_variable = "src/flake8_django_migrations/__init__.py:__version__"
+version_variables = [
+    "src/flake8_django_migrations/__init__.py:__version__",
+]
 build_command = "pip install poetry && poetry build"
 
 [tool.semantic_release.changelog]
