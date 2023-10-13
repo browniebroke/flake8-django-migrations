@@ -27,6 +27,12 @@
   <img src="https://img.shields.io/pypi/l/flake8-django-migrations.svg?style=flat-square" alt="license">
 </p>
 
+---
+
+**Source Code**: <a href="https://github.com/browniebroke/flake8-django-migrations" target="_blank">https://github.com/browniebroke/flake8-django-migrations</a>
+
+---
+
 Flake8 plugin to lint for backwards incompatible database migrations.
 
 ## Installation
