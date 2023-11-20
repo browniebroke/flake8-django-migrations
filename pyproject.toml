@@ -30,12 +30,18 @@ pytest-cov = "^4.0"
 [tool.poetry.plugins."flake8.extension"]
 DM = "flake8_django_migrations:Plugin"
 
+[tool.semantic_release.branches.main]
+match = "main"
+
+[tool.semantic_release.branches.noop]
+match = "(?!main$)"
+prerelease = true
+
 [tool.pytest.ini_options]
 addopts = "-v -Wdefault --cov=flake8_django_migrations"
 pythonpath = ["src"]
 
 [tool.semantic_release]
-branch = "main"
 version_toml = ["pyproject.toml:tool.poetry.version"]
 version_variables = [
     "src/flake8_django_migrations/__init__.py:__version__",
