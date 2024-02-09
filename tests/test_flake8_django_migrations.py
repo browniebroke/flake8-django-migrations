@@ -1,4 +1,5 @@
 """Tests for `flake8_django_migrations` package."""
+
 import ast
 from textwrap import dedent
 from typing import Set
