@@ -1,27 +1,31 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [ "poetry-core>=1" ]
+
 [tool.poetry]
 name = "flake8-django-migrations"
 version = "1.0.0"
 description = "Flake8 plugin to lint for backwards incompatible database migrations"
-authors = ["Bruno Alla <bruno.alla@festicket.com>"]
+authors = [ "Bruno Alla <bruno.alla@festicket.com>" ]
 license = "MIT"
 readme = "README.md"
-keywords = ["flake8", "lint", "django", "migrations"]
+keywords = [ "flake8", "lint", "django", "migrations" ]
 repository = "https://github.com/browniebroke/flake8-django-migrations"
 classifiers = [
-    "Development Status :: 1 - Planning",
-    "Intended Audience :: Developers",
-    "Natural Language :: English",
-    "Operating System :: OS Independent",
-    "Environment :: Console",
-    "Framework :: Flake8",
-    "Topic :: Software Development :: Quality Assurance"
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+  "Framework :: Flake8",
+  "Topic :: Software Development :: Quality Assurance",
 ]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 flake8 = ">=3.7"
 astor = ">=0.1"
-importlib-metadata = {version = ">=0.9", python = "<3.8"}
+importlib-metadata = { version = ">=0.9", python = "<3.8" }
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
@@ -30,6 +34,51 @@ pytest-cov = "^5.0.0"
 [tool.poetry.plugins."flake8.extension"]
 DM = "flake8_django_migrations:Plugin"
 
+[tool.ruff]
+target-version = "py38"
+line-length = 88
+
+lint.select = [
+  "B",   # flake8-bugbear
+  "C4",  # flake8-comprehensions
+  "D",   # flake8-docstrings
+  "E",   # pycodestyle
+  "F",   # pyflake
+  "I",   # isort
+  "RUF", # ruff specific
+  "S",   # flake8-bandit
+  "UP",  # pyupgrade
+  "W",   # pycodestyle
+]
+lint.ignore = [
+  "D100", # Missing docstring in public module
+  "D104", # Missing docstring in public package
+  "D107", # Missing docstring in `__init__`
+  "D203", # 1 blank line required before class docstring
+  "D212", # Multi-line docstring summary should start at the first line
+  "D401", # First line of docstring should be in imperative mood
+]
+lint.per-file-ignores."tests/**/*" = [
+  "D100",
+  "D101",
+  "D102",
+  "D103",
+  "D104",
+  "S101",
+]
+lint.isort.known-first-party = [ "flake8_django_migrations" ]
+
+[tool.pytest.ini_options]
+addopts = "-v -Wdefault --cov=flake8_django_migrations"
+pythonpath = [ "src" ]
+
+[tool.coverage.run]
+branch = true
+source = [ "flake8_django_migrations" ]
+
+[tool.coverage.report]
+ignore_errors = true
+
 [tool.semantic_release.branches.main]
 match = "main"
 
@@ -37,73 +86,19 @@ match = "main"
 match = "(?!main$)"
 prerelease = true
 
-[tool.pytest.ini_options]
-addopts = "-v -Wdefault --cov=flake8_django_migrations"
-pythonpath = ["src"]
-
 [tool.semantic_release]
-version_toml = ["pyproject.toml:tool.poetry.version"]
+version_toml = [ "pyproject.toml:tool.poetry.version" ]
 version_variables = [
-    "src/flake8_django_migrations/__init__.py:__version__",
+  "src/flake8_django_migrations/__init__.py:__version__",
 ]
 build_command = "pip install poetry && poetry build"
 
 [tool.semantic_release.changelog]
 exclude_commit_patterns = [
-    "chore.*",
-    "ci.*",
-    "Merge pull request .*",
+  "chore.*",
+  "ci.*",
+  "Merge pull request .*",
 ]
 
 [tool.semantic_release.changelog.environment]
 keep_trailing_newline = true
-
-[tool.ruff]
-target-version = "py38"
-line-length = 88
-
-[tool.ruff.lint]
-ignore = [
-    "D203", # 1 blank line required before class docstring
-    "D212", # Multi-line docstring summary should start at the first line
-    "D100", # Missing docstring in public module
-    "D104", # Missing docstring in public package
-    "D107", # Missing docstring in `__init__`
-    "D401", # First line of docstring should be in imperative mood
-]
-select = [
-    "B",   # flake8-bugbear
-    "D",   # flake8-docstrings
-    "C4",  # flake8-comprehensions
-    "S",   # flake8-bandit
-    "F",   # pyflake
-    "E",   # pycodestyle
-    "W",   # pycodestyle
-    "UP",  # pyupgrade
-    "I",   # isort
-    "RUF", # ruff specific
-]
-
-[tool.ruff.lint.per-file-ignores]
-"tests/**/*" = [
-    "D100",
-    "D101",
-    "D102",
-    "D103",
-    "D104",
-    "S101",
-]
-
-[tool.ruff.lint.isort]
-known-first-party = ["flake8_django_migrations"]
-
-[tool.coverage.run]
-branch = true
-source = ["flake8_django_migrations"]
-
-[tool.coverage.report]
-ignore_errors = true
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
