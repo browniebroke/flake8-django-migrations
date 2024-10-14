@@ -24,7 +24,7 @@ repos:
       - id: trailing-whitespace
       - id: debug-statements
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: "2.3.0"
+    rev: "2.3.1"
     hooks:
       - id: pyproject-fmt
   - repo: https://github.com/python-poetry/poetry
