@@ -4,7 +4,7 @@ requires = [ "poetry-core>=1" ]
 
 [tool.poetry]
 name = "flake8-django-migrations"
-version = "1.0.0"
+version = "1.1.0"
 description = "Flake8 plugin to lint for backwards incompatible database migrations"
 authors = [ "Bruno Alla <bruno.alla@festicket.com>" ]
 license = "MIT"
