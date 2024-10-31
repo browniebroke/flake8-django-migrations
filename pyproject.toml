@@ -22,7 +22,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 flake8 = ">=3.7"
 astor = ">=0.1"
 importlib-metadata = { version = ">=0.9", python = "<3.8" }
@@ -35,7 +35,7 @@ pytest-cov = "^5.0.0"
 DM = "flake8_django_migrations:Plugin"
 
 [tool.ruff]
-target-version = "py38"
+target-version = "py39"
 line-length = 88
 
 lint.select = [
