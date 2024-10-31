@@ -2,12 +2,11 @@
 
 import ast
 from textwrap import dedent
-from typing import Set
 
 from flake8_django_migrations import Plugin
 
 
-def _results(s: str) -> Set[str]:
+def _results(s: str) -> set[str]:
     tree = ast.parse(dedent(s))
     plugin = Plugin(tree)
     return {f"{line}:{col} {msg}" for line, col, msg, _ in plugin.run()}

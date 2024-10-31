@@ -2,7 +2,8 @@ from __future__ import annotations
 
 import ast
 import importlib.metadata as importlib_metadata
-from typing import Any, ClassVar, Generator
+from collections.abc import Generator
+from typing import Any, ClassVar
 
 from .checkers.base import Checker
 from .checkers.issue import Issue
