@@ -75,7 +75,7 @@ jobs:
 
       - name: Checkout commit for release
         run: |
-            git checkout -B ${{ github.ref_name }} ${{ github.sha }}
+          git checkout -B ${{ github.ref_name }} ${{ github.sha }}
 
       # Do a dry run of PSR
       - name: Test release
