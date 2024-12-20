@@ -36,8 +36,7 @@ jobs:
         shell: bash
       - run: uv run pytest --cov-report=xml
         shell: bash
-      - name: Upload coverage report
-        uses: codecov/codecov-action@v4
+      - uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
