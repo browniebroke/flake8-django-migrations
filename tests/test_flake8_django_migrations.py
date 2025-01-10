@@ -36,8 +36,7 @@ def test_unsafe_drop_column():
         ]
     """
     assert _results(input_code) == {
-        "4:8 DM001 RemoveField operation should be wrapped in "
-        "SeparateDatabaseAndState",
+        "4:8 DM001 RemoveField operation should be wrapped in SeparateDatabaseAndState",
     }
 
 
