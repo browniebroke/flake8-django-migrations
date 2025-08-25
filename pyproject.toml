@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "setuptools.build_meta"
-requires = [ "setuptools" ]
+requires = [ "setuptools>=77.0.3" ]
 
 [project]
 name = "flake8-django-migrations"
@@ -13,7 +13,7 @@ keywords = [
   "lint",
   "migrations",
 ]
-license = { text = "MIT" }
+license = "MIT"
 authors = [
   { name = "Bruno Alla", email = "bruno.alla@festicket.com" },
 ]
