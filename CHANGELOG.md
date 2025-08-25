@@ -1,10 +1,16 @@
 # CHANGELOG
 
+## v1.1.1 (2025-08-25)
+
+### Bug fixes
+
+- Use spdx expression for license ([`39e1542`](https://github.com/browniebroke/flake8-django-migrations/commit/39e15426c12e26b59389d0a78481ce1ed7d65158))
+
 ## v1.1.0 (2024-10-31)
 
 ### Features
 
-- Drop support for python 3.8 (#650) ([`9c6e6d7`](https://github.com/browniebroke/flake8-django-migrations/commit/9c6e6d709593e35a28e1a25e06fa611cb3f8ae9c))
+- Drop support for python 3.8 ([`9c6e6d7`](https://github.com/browniebroke/flake8-django-migrations/commit/9c6e6d709593e35a28e1a25e06fa611cb3f8ae9c))
 
 ## v1.0.0 (2023-06-27)
 
