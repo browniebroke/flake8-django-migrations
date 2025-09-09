@@ -45,7 +45,7 @@ entry-points."flake8.extension".DM = "flake8_django_migrations:Plugin"
 [dependency-groups]
 dev = [
   "pytest>=8,<9",
-  "pytest-cov>=6,<7",
+  "pytest-cov>=7,<8",
 ]
 
 [tool.ruff]
