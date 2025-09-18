@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v1.2.0 (2025-09-18)
+
+### Features
+
+- Add support for python 3.14 ([`cadda27`](https://github.com/browniebroke/flake8-django-migrations/commit/cadda275571463c946497bc2d485161b8caec949))
+- Drop support for python 3.9 ([`2aa0d54`](https://github.com/browniebroke/flake8-django-migrations/commit/2aa0d5425e4976e044d9b3fbb5799356ed87b996))
+
 ## v1.1.1 (2025-08-25)
 
 ### Bug fixes
