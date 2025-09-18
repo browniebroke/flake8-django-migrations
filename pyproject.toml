@@ -80,6 +80,9 @@ lint.per-file-ignores."tests/**/*" = [
 ]
 lint.isort.known-first-party = [ "flake8_django_migrations" ]
 
+[tool.pyproject-fmt]
+max_supported_python = "3.14"
+
 [tool.pytest.ini_options]
 addopts = "-v -Wdefault --cov=flake8_django_migrations"
 pythonpath = [ "src" ]
