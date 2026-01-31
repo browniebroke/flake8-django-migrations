@@ -88,19 +88,12 @@ max_supported_python = "3.14"
 addopts = "-v -Wdefault --cov=flake8_django_migrations"
 pythonpath = [ "src" ]
 
-[tool.coverage.run]
-branch = true
-source = [ "flake8_django_migrations" ]
-
 [tool.coverage.report]
 ignore_errors = true
 
-[tool.semantic_release.branches.main]
-match = "main"
-
-[tool.semantic_release.branches.noop]
-match = "(?!main$)"
-prerelease = true
+[tool.coverage.run]
+branch = true
+source = [ "flake8_django_migrations" ]
 
 [tool.semantic_release]
 version_toml = [ "pyproject.toml:project.version" ]
@@ -113,6 +106,13 @@ uv lock
 git add uv.lock
 uv build
 """
+
+[tool.semantic_release.branches.main]
+match = "main"
+
+[tool.semantic_release.branches.noop]
+match = "(?!main$)"
+prerelease = true
 
 [tool.semantic_release.changelog]
 exclude_commit_patterns = [
