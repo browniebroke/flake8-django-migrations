@@ -87,9 +87,9 @@ ini_options.addopts = "-v -Wdefault --cov=flake8_django_migrations"
 ini_options.pythonpath = [ "src" ]
 
 [tool.coverage]
-report.ignore_errors = true
 run.branch = true
 run.source = [ "flake8_django_migrations" ]
+report.ignore_errors = true
 
 [tool.semantic_release]
 version_toml = [ "pyproject.toml:project.version" ]
