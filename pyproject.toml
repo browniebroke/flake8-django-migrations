@@ -83,8 +83,8 @@ lint.isort.known-first-party = [ "flake8_django_migrations" ]
 max_supported_python = "3.14"
 
 [tool.pytest]
-ini_options.addopts = "-v -Wdefault --cov=flake8_django_migrations"
-ini_options.pythonpath = [ "src" ]
+addopts = "-v -Wdefault --cov=flake8_django_migrations"
+pythonpath = [ "src" ]
 
 [tool.coverage]
 run.branch = true
