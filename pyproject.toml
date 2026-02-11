@@ -84,7 +84,7 @@ max_supported_python = "3.14"
 
 [tool.pytest]
 minversion = "9.0"
-addopts = ["-v", "-Wdefault", "--cov=flake8_django_migrations"]
+addopts = [ "-v", "-Wdefault", "--cov=flake8_django_migrations" ]
 pythonpath = [ "src" ]
 
 [tool.coverage]
