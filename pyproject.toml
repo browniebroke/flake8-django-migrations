@@ -83,7 +83,8 @@ lint.isort.known-first-party = [ "flake8_django_migrations" ]
 max_supported_python = "3.14"
 
 [tool.pytest]
-addopts = "-v -Wdefault --cov=flake8_django_migrations"
+minversion = "9.0"
+addopts = ["-v", "-Wdefault", "--cov=flake8_django_migrations"]
 pythonpath = [ "src" ]
 
 [tool.coverage]
