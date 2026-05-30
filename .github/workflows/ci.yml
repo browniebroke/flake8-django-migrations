@@ -21,21 +21,8 @@ jobs:
           ref: ${{ github.head_ref || github.ref }}
       - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
       - uses: j178/prek-action@bdca6f102f98e2b4c7029491a53dfd366469e33d # v2.0.4
-        id: prek
         continue-on-error: true
-      - name: Commit auto-fixes from prek
-        if: steps.prek.outcome == 'failure'
-        run: |
-          if [[ "${{ github.event_name }}" == "pull_request" ]] && [[ -n "$(git status --porcelain)" ]]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "chore: auto-fix from pre-commit hooks"
-            git push
-          else
-            echo "prek failed and no auto-fixes were applied"
-            exit 1
-          fi
+      - uses: pre-commit-ci/lite-action@v1.1.0
 
   test:
     runs-on: ${{ matrix.os }}
