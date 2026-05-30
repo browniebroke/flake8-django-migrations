@@ -23,6 +23,8 @@ jobs:
       - uses: j178/prek-action@bdca6f102f98e2b4c7029491a53dfd366469e33d # v2.0.4
         continue-on-error: true
       - uses: pre-commit-ci/lite-action@v1.1.0
+        with:
+          msg: "chore: auto-fix from pre-commit hooks"
 
   test:
     runs-on: ${{ matrix.os }}
