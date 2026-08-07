@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v1.3.0 (2026-08-07)
+
+### Features
+
+- Add support for python 3.15 ([`5e48253`](https://github.com/browniebroke/flake8-django-migrations/commit/5e482534dac60ebe5aa62e161953b79fd82a71de))
+
 ## v1.2.0 (2025-09-18)
 
 ### Features
