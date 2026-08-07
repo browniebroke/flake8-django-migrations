@@ -31,6 +31,7 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
   "Topic :: Software Development :: Quality Assurance",
 ]
 dependencies = [
@@ -80,7 +81,7 @@ lint.per-file-ignores."tests/**/*" = [
 lint.isort.known-first-party = [ "flake8_django_migrations" ]
 
 [tool.pyproject-fmt]
-max_supported_python = "3.14"
+max_supported_python = "3.15"
 
 [tool.pytest]
 addopts = [ "-v", "-Wdefault", "--cov=flake8_django_migrations" ]
