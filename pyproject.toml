@@ -89,8 +89,8 @@ minversion = "9.0"
 pythonpath = [ "src" ]
 
 [tool.coverage]
-run.branch = true
 run.source = [ "flake8_django_migrations" ]
+run.branch = true
 report.ignore_errors = true
 
 [tool.semantic_release]
