@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v2.0.0 (2026-11-07)
+
+### Features
+
+- Drop support for python 3.10 ([`1d497c2`](https://github.com/browniebroke/flake8-django-migrations/commit/1d497c2a9b61efa0d065c84e133deee026e5f773))
+
 ## v1.3.0 (2026-08-07)
 
 ### Features
